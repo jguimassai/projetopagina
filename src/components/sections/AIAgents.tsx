@@ -170,7 +170,7 @@ const AIAgents: React.FC = () => {
                         </div>
                         <div>
                           <h4 className="font-medium text-white">Assistente IA</h4>
-                          <p className="text-xs text-white/60">Automatik Labs</p>
+                          <p className="text-xs text-white/60">GmTech Automações</p>
                         </div>
                       </div>
                       <div className="space-y-3">

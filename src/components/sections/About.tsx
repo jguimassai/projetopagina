@@ -52,7 +52,7 @@ const About: React.FC = () => {
               Somos especialistas em <GradientText>IA aplicada</GradientText> para resultados reais
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              A Automatik Labs é referência em agentes de IA humanizados e soluções de automação sob medida 
+              A GmTech Automações é referência em agentes de IA humanizados e soluções de automação sob medida
               para negócios que buscam eficiência operacional, aumento de receita e redução de custos.
             </p>
           </div>

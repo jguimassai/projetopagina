@@ -88,7 +88,7 @@ const CTA: React.FC = () => {
                 <iframe
                   src="https://typebot.co/aplica-es-automatik-labs-e4owx7x"
                   style={{ border: 'none', width: '100%', height: '600px' }}
-                  title="Typebot - Automatik Labs"
+                  title="Typebot - GmTech Automações"
                 />
               </div>
             </div>
