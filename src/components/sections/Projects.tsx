@@ -24,7 +24,7 @@ const projects: Project[] = [
   {
     title: "Super Time de Agentes",
     description: "Equipe completa de agentes de IA trabalhando em conjunto para maximizar resultados",
-    image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
     details: {
       overview: "O Time de Agentes é uma solução revolucionária que permite que múltiplos agentes de IA trabalhem em conjunto, cada um com sua especialidade, para realizar tarefas complexas com precisão e eficiência incomparáveis.",
       features: [
@@ -61,7 +61,7 @@ const projects: Project[] = [
   {
     title: "Super Analista de Marketing",
     description: "IA especializada em análise e otimização de campanhas de marketing digital",
-    image: "https://images.pexels.com/photos/3183028/pexels-photo-3183028.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=800",
     details: {
       overview: "Um analista virtual que utiliza IA avançada para otimizar suas campanhas de marketing e maximizar o ROI.",
       features: [
@@ -87,7 +87,7 @@ const projects: Project[] = [
   {
     title: "Super Robô Assistente",
     description: "Assistente virtual inteligente para automação de processos e atendimento",
-    image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=800",
     details: {
       overview: "O James Faz Tudo é um super agente criado em n8n, que entende texto, imagem e voz — e pode fazer demonstrações automáticas do seu trabalho de automação para impressionar leads e fechar contratos com mais facilidade.",
       features: [
@@ -113,7 +113,7 @@ const projects: Project[] = [
   {
     title: "Agente de Marketing",
     description: "Especialista em estratégias e execução de campanhas de marketing",
-    image: "https://images.pexels.com/photos/3145390/pexels-photo-3145390.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800",
     details: {
       overview: "Um agente especializado em marketing que automatiza e otimiza suas campanhas para máximo impacto.",
       features: [
@@ -139,7 +139,7 @@ const projects: Project[] = [
   {
     title: "Agente de Ligação com IA",
     description: "Automação inteligente de chamadas e follow-ups comerciais",
-    image: "https://images.pexels.com/photos/3183163/pexels-photo-3183163.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/5632398/pexels-photo-5632398.jpeg?auto=compress&cs=tinysrgb&w=800",
     details: {
       overview: "Um agente especializado em comunicação que automatiza e humaniza o processo de ligações e follow-ups.",
       features: [
