@@ -950,14 +950,21 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
+      if (!res.ok) {
+        const txt = await res.text().catch(() => '');
+        throw new Error('HTTP ' + res.status + (txt ? ': ' + txt.slice(0, 120) : ''));
+      }
       form.style.display = 'none';
       document.getElementById('form-success').classList.add('active');
-    } catch {
+    } catch (err) {
+      console.error('[MassaiLabs form]', err);
       btn.innerHTML = 'Quero meu Diagnóstico Gratuito <span class="arr">→</span>';
       btn.disabled = false;
       form.style.display = 'none';
-      document.getElementById('form-error').classList.add('active');
+      const errEl = document.getElementById('form-error');
+      errEl.classList.add('active');
+      const detail = errEl.querySelector('.form-state-body');
+      if (detail) detail.textContent = 'Erro: ' + (err.message || 'falha de rede') + '. Fale diretamente no WhatsApp.';
     }
   });
 
