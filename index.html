@@ -945,15 +945,12 @@
     btn.disabled = true;
 
     try {
-      const res = await fetch(WEBHOOK, {
+      await fetch(WEBHOOK, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
         body: JSON.stringify(data),
       });
-      if (!res.ok) {
-        const txt = await res.text().catch(() => '');
-        throw new Error('HTTP ' + res.status + (txt ? ': ' + txt.slice(0, 120) : ''));
-      }
       form.style.display = 'none';
       document.getElementById('form-success').classList.add('active');
     } catch (err) {
@@ -964,7 +961,7 @@
       const errEl = document.getElementById('form-error');
       errEl.classList.add('active');
       const detail = errEl.querySelector('.form-state-body');
-      if (detail) detail.textContent = 'Erro: ' + (err.message || 'falha de rede') + '. Fale diretamente no WhatsApp.';
+      if (detail) detail.textContent = 'Erro de rede. Fale diretamente no WhatsApp.';
     }
   });
 
