@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": "post-01",
+      "carousel": "04-antes-depois-agenda",
+      "slides": 8,
+      "scheduledAt": "2026-06-02T11:00:00-03:00",
+      "label": "Carousel 04 — Antes e depois: agenda"
+    },
+    {
+      "id": "post-02",
+      "carousel": "01-5-leads-perdidos",
+      "slides": 8,
+      "scheduledAt": "2026-06-05T12:00:00-03:00",
+      "label": "Carousel 01 — 5 leads perdidos"
+    },
+    {
+      "id": "post-03",
+      "carousel": "06-vendedor-23h",
+      "slides": 6,
+      "scheduledAt": "2026-06-09T20:00:00-03:00",
+      "label": "Carousel 06 — Vendedor 23h"
+    },
+    {
+      "id": "post-04",
+      "carousel": "02-calculadora-leads-perdidos",
+      "slides": 8,
+      "scheduledAt": "2026-06-12T12:00:00-03:00",
+      "label": "Carousel 02 — Calculadora de leads perdidos"
+    },
+    {
+      "id": "post-05",
+      "carousel": "03-concorrente-no-box",
+      "slides": 7,
+      "scheduledAt": "2026-06-17T19:00:00-03:00",
+      "label": "Carousel 03 — Concorrente no box"
+    },
+    {
+      "id": "post-06",
+      "carousel": "05-resultado-prova",
+      "slides": 7,
+      "scheduledAt": "2026-06-19T12:00:00-03:00",
+      "label": "Carousel 05 — Não é promessa, é prova"
+    }
+  ]
+}
