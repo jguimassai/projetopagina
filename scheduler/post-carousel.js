@@ -15,16 +15,6 @@ const API_BASE = 'https://graph.facebook.com/v19.0';
 const DELAY_MS = 3000; // aguarda entre criação de containers
 
 function loadEnv() {
-  // Em GitHub Actions, usa variáveis de ambiente diretamente
-  if (process.env.INSTAGRAM_ACCOUNT_ID) {
-    return {
-      INSTAGRAM_ACCOUNT_ID: process.env.INSTAGRAM_ACCOUNT_ID,
-      META_APP_ID: process.env.META_APP_ID,
-      META_ACCESS_TOKEN: process.env.META_ACCESS_TOKEN,
-      FACEBOOK_PAGE_ID: process.env.FACEBOOK_PAGE_ID,
-    };
-  }
-  // Localmente, lê do .env
   const envPath = join(__dirname, '.env');
   const lines = readFileSync(envPath, 'utf8').split('\n');
   const env = {};
@@ -126,12 +116,16 @@ async function postCarousel(carouselName) {
     await sleep(DELAY_MS);
   }
 
-  // Passo 2: criar container do carousel
+  // Passo 2: criar container do carousel (hashtags incluídas na caption)
+  const fullCaption = captionData.firstComment
+    ? `${captionData.caption}\n.\n.\n.\n${captionData.firstComment}`
+    : captionData.caption;
+
   console.log('\n  Criando container do carousel...');
   const carouselId = await createCarouselContainer(
     INSTAGRAM_ACCOUNT_ID,
     childrenIds,
-    captionData.caption,
+    fullCaption,
     META_ACCESS_TOKEN
   );
   console.log(`✅ Carousel container: ${carouselId}`);
@@ -141,14 +135,6 @@ async function postCarousel(carouselName) {
   console.log('\n  Publicando...');
   const mediaId = await publishCarousel(INSTAGRAM_ACCOUNT_ID, carouselId, META_ACCESS_TOKEN);
   console.log(`✅ Publicado! Media ID: ${mediaId}`);
-
-  // Passo 4: postar primeiro comentário com hashtags
-  if (captionData.firstComment) {
-    console.log('\n  Postando hashtags no primeiro comentário...');
-    await sleep(2000);
-    await apiPost(`/${mediaId}/comments`, { message: captionData.firstComment }, META_ACCESS_TOKEN);
-    console.log('✅ Hashtags postadas!');
-  }
 
   console.log(`\n🎉 ${carouselName} publicado com sucesso!`);
   console.log(`   Acesse: https://www.instagram.com/p/ (pode levar alguns minutos para aparecer)`);
