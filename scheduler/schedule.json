@@ -4,7 +4,7 @@
       "id": "post-01",
       "carousel": "04-antes-depois-agenda",
       "slides": 8,
-      "scheduledAt": "2026-06-02T11:00:00-03:00",
+      "scheduledAt": "2026-06-01T11:00:00-03:00",
       "label": "Carousel 04 — Antes e depois: agenda"
     },
     {
@@ -23,17 +23,17 @@
     },
     {
       "id": "post-04",
-      "carousel": "02-calculadora-leads-perdidos",
-      "slides": 8,
-      "scheduledAt": "2026-06-12T12:00:00-03:00",
-      "label": "Carousel 02 — Calculadora de leads perdidos"
+      "carousel": "03-concorrente-no-box",
+      "slides": 7,
+      "scheduledAt": "2026-06-12T19:00:00-03:00",
+      "label": "Carousel 03 — Concorrente no box"
     },
     {
       "id": "post-05",
-      "carousel": "03-concorrente-no-box",
-      "slides": 7,
-      "scheduledAt": "2026-06-17T19:00:00-03:00",
-      "label": "Carousel 03 — Concorrente no box"
+      "carousel": "02-calculadora-leads-perdidos",
+      "slides": 8,
+      "scheduledAt": "2026-06-17T12:00:00-03:00",
+      "label": "Carousel 02 — Calculadora de leads perdidos"
     },
     {
       "id": "post-06",

@@ -10,17 +10,17 @@ on:
     # Todos os horários em UTC. BRT = UTC-3, então:
     # 11:00 BRT = 14:00 UTC | 12:00 BRT = 15:00 UTC | 19:00 BRT = 22:00 UTC | 20:00 BRT = 23:00 UTC
 
-    # Post 1 — 02/06 (seg) 11:00 BRT → Carousel 04
-    - cron: '0 14 2 6 *'
-    # Post 2 — 05/06 (qui) 12:00 BRT → Carousel 01
+    # Post 1 — 01/06 (seg) 11:00 BRT → Carousel 04
+    - cron: '0 14 1 6 *'
+    # Post 2 — 05/06 (sex) 12:00 BRT → Carousel 01
     - cron: '0 15 5 6 *'
-    # Post 3 — 09/06 (seg) 20:00 BRT → Carousel 06
+    # Post 3 — 09/06 (ter) 20:00 BRT → Carousel 06
     - cron: '0 23 9 6 *'
-    # Post 4 — 12/06 (qui) 12:00 BRT → Carousel 02
-    - cron: '0 15 12 6 *'
-    # Post 5 — 17/06 (ter) 19:00 BRT → Carousel 03
-    - cron: '0 22 17 6 *'
-    # Post 6 — 19/06 (qui) 12:00 BRT → Carousel 05
+    # Post 4 — 12/06 (sex) 19:00 BRT → Carousel 03
+    - cron: '0 22 12 6 *'
+    # Post 5 — 17/06 (qua) 12:00 BRT → Carousel 02
+    - cron: '0 15 17 6 *'
+    # Post 6 — 19/06 (sex) 12:00 BRT → Carousel 05
     - cron: '0 15 19 6 *'
 
 jobs:
@@ -43,18 +43,17 @@ jobs:
           else
             DAY=$(date -u +%-d)
             MONTH=$(date -u +%-m)
-            HOUR=$(date -u +%-H)
 
-            if [ "$MONTH" = "6" ] && [ "$DAY" = "2" ]; then
+            if [ "$MONTH" = "6" ] && [ "$DAY" = "1" ]; then
               echo "name=04-antes-depois-agenda" >> $GITHUB_OUTPUT
             elif [ "$MONTH" = "6" ] && [ "$DAY" = "5" ]; then
               echo "name=01-5-leads-perdidos" >> $GITHUB_OUTPUT
             elif [ "$MONTH" = "6" ] && [ "$DAY" = "9" ]; then
               echo "name=06-vendedor-23h" >> $GITHUB_OUTPUT
             elif [ "$MONTH" = "6" ] && [ "$DAY" = "12" ]; then
-              echo "name=02-calculadora-leads-perdidos" >> $GITHUB_OUTPUT
-            elif [ "$MONTH" = "6" ] && [ "$DAY" = "17" ]; then
               echo "name=03-concorrente-no-box" >> $GITHUB_OUTPUT
+            elif [ "$MONTH" = "6" ] && [ "$DAY" = "17" ]; then
+              echo "name=02-calculadora-leads-perdidos" >> $GITHUB_OUTPUT
             elif [ "$MONTH" = "6" ] && [ "$DAY" = "19" ]; then
               echo "name=05-resultado-prova" >> $GITHUB_OUTPUT
             else
